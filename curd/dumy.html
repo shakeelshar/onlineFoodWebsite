@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Hidden Content</title>
+  <style>
+    .hidden-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="toggleButton"></div>
+  <button data-target="hiddenContent1">Toggle Content 1</button>
+  <button  data-target="hiddenContent2">Toggle Content 2</button>
+  
+
+        <i class=""></i>
+        <span class="text"> Add Food</span>
+    </div>
+
+    <div class="activity-data">
+        <div class="data names">
+            <span class="data-title">Foods</span>
+            <span class="data-list">Brayani</span>
+            <span class="data-list">Kharai</span>
+            <span class="data-list">chiken Korma</span>
+            <span class="data-list">halwa</span>
+            <span class="data-list">Nodels</span>
+            <span class="data-list">desi Prtha</span>
+            <span class="data-list">Fresh Juice</span>
+        </div>
+        <div class="data email">
+            <span class="data-title">Price</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            <span class="data-list">$20</span>
+            
+        </div>
+        <div class="data joined">
+            <span class="data-title">Order date</span>
+            <span class="data-list">2023-02-12</span>
+            <span class="data-list">2023-02-12</span>
+            <span class="data-list">2023-02-13</span>
+            <span class="data-list">2023-02-13</span>
+            <span class="data-list">2023-02-14</span>
+            <span class="data-list">2023-02-14</span>
+            <span class="data-list">2023-02-15</span>
+        </div>
+        <div class="data type">
+             <button>  <span class="data-title">ADD</span></button>
+           <button> <span class="data-title">ADD</span></button>
+            <button> <span class="data-title">ADD</span></button>
+           <button> <span class="data-title">ADD</span></button>
+            <button>   <span class="data-title">ADD</span></button>
+             <button>   <span class="data-title">ADD</span></button>
+        </div>
+        <div class="data status">
+            <button> <span class="data-list">Edit</span></button>
+            <button> <span class="data-list">Edit</span></button>
+            <button> <span class="data-list">Edit</span></button>
+            <button> <span class="data-list">Edit</span></button>
+            <button> <span class="data-list">Edit</span></button>
+            <button> <span class="data-list">Edit</span></button>
+
+            
+        </div>
+    </div>
+</div>
+
+  <div id="hiddenContent1" class="hidden-content">
+    <!-- Your hidden content for button 1 goes here -->
+    <p>This is the hidden content for button 1.</p>
+  </div>
+
+  <div id="hiddenContent2" class="hidden-content">
+    <!-- Your hidden content for button 2 goes here -->
+    <p>This is the hidden content for button 2.</p>
+  </div>
+
+  <script>
+    // Get all elements with the class 'toggleButton'
+    var toggleButtons = document.querySelectorAll('.toggleButton');
+
+    // Loop through each button and attach an event listener
+    toggleButtons.forEach(function(button) {
+      button.addEventListener('click', function () {
+        // Get the target ID from the 'data-target' attribute
+        var targetId = button.getAttribute('data-target');
+        var hiddenContent = document.getElementById(targetId);
+
+        // Toggle the visibility of the content by adding/removing the 'hidden-content' class
+        if (hiddenContent) {
+          hiddenContent.classList.toggle('hidden-content');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contr{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightseagreen;
+    column-gap: 30px;
+
+
+}
+
+.form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 35px;
+    background: white;
+}
+
+header {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: wheat;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 12px;
+
+}
+
+.field input {
+    
+    height: 100%;
+    width: 100%;
+}
+
+.input-field,
+.field button {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 600px;
+    border-radius: 20px;
+
+
+}
+
+.field button {
+
+    background-color: darkblue;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.field button:hover {
+    background-color: blue;
+    cursor: pointer;
+
+}
+
+.input-field {
+   
+    padding: 0 14px;
+    border: 1px solid transparent
+}
+
+.eye-icon {
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+
+}
+
+.forget-pass {
+    color: white;
+
+}
+
+.form a {
+    text-decoration: none;
+    color: lightpink;
+}
+
+.form a:hover {
+    color: white;
+    letter-spacing: .3px;
+    text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: red;
+    margin-top: 30px;
+}
+
+.line::before {
+    content: "Or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 0 13px;
+    background-color: white;
+    font-size: 20px;
+}
+.media-option a{
+    display: flex;
+    background-color: blue;
+    padding: 17px;
+    margin-top: 10px;
+   justify-content: center;
+   align-items: center;
+  font-size: 20px;
+
+}
+a.fb{
+    color: white;
+background-color: blue;
+}
+a.fb .fb-icon{
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    background-color: white;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+
+}
+a.gb{
+ color: black;
+background-color: white;
+border: 2px solid blue
+}
+
+a.gb .go-icon{
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    background-color: darkgray;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.form-content .signup{
+    pointer-events: auto;
+    opacity: 0;
+}
+.forms.show-signup .form-content .signup{
+    pointer-events:auto;
+    opacity: 1;
+
+}
+
+.forms.show-signup .form-content .login{
+    pointer-events:none;
+    opacity: 1;
+
+}
+@media screen and(max-width 400px){
+    .form-content {
+        padding: 12px 13px;
+    }
+}

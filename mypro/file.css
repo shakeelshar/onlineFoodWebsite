@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&display=swap');
+
+:root {
+    --green: #27ae60;
+    --balck: #192a56;
+    --light-color: #567;
+    --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 2.6rem;
+    font-size: 55.4%;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 0, 0, 0.089);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    /* box-shadow: var(--box-shadow); */
+}
+
+header .logo {
+    color:#27ae60;
+    font-size: 3.5rem;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+   header .logo i {
+    color: yellow;
+    font-size: 30px;
+
+    
+}
+header .navebar a{
+    font-size: 26px;
+    padding: 5px 15px;
+    border-radius:  .5rem;
+    border: 2px solid yellow transparent;
+    margin: 5px;
+    color:white;
+    transition: 1s ease-in-out;
+}
+header .navebar a:hover{
+    color: grey;
+    background-color:yellow;
+}
+header .navebar a.active{
+    color: white;
+    background-color:green;
+
+}
+
+
+
+header .icons a{
+    cursor: pointer;
+    margin-left: 3rem;
+    height: 4.4rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 49%;
+    background: wheat;
+    transition: transform 1s ease-in;
+}
+header .icons i {
+    cursor: pointer;
+    margin-left: 3rem;
+    height: 4.4rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 49%;
+    background: wheat;
+    transition: transform 1s ease-in;
+}
+header .icons a:hover,
+header .icons i:hover {
+    color: white;
+    background: blue;
+    transform: rotate(60deg);
+}
+header .icons #bars-m{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+    html{
+        font-size: 50%;
+    }
+    header{
+        padding:2rem;
+        color: yellow;
+    }
+    
+    section{
+        padding: 1rem 2rem;
+        color: yellow;
+    }
+    
+}
+@media (max-width: 790px){
+    header .icons #bars-m{
+        display: inline-block;
+
+    }
+    
+header .icons a:hover,
+header .icons i:hover {
+    color: cadetblue;
+    background: green;
+    transform: rotate(360deg);
+}
+header .navebar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #27ae60;
+    height: 100vh;
+    border-top: 1rem solid rgba(0, 0, 0, .3);
+    border-bottom: 1rem solid rgba(0, 0, 0, .3);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 0 0);
+}
+header .navebar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0%  100%);
+
+}
+.home .home-slider .slide .content h2{
+    font-size: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+header .navebar a{
+    display: block;
+    padding: 1.4rem;
+    margin: 1rem;
+    text-align: center;
+    
+}
+
+#search-form #search-box{
+    width: 90%;
+    padding: 1 2rem;
+    
+}
+
+.review .slide .user p{
+    font-size: 18px;
+    color:black;
+}
+
+.review .slide p{
+    font-size: 15px;
+    color: rgb(127, 255, 176);
+    
+}
+
+
+}
+
+
+@media (max-width: 450px) {
+    html{
+        font-size: 45%;
+    }
+    
+.order form .inputBox .input{
+    width: 100%;
+
+}
+
+}
+#search-form{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    transition: left 1s ease-in; 
+}
+#search-form.active{
+    left: 0;
+}
+
+.dishes .box-container .box img{
+    height: auto;
+    width: 100%;
+}
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid red;
+    padding: 2rem 0;
+    color: white;
+    font-size: 3rem;
+    text-transform: none;
+    background:none;
+
+}
+#search-form #search-box::placeholder{
+    color: white;
+}
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+#search-form label{
+    color: white;
+    padding: 3px;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+#search-form label:hover{
+    color: green;
+}
+#search-form #close{
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 30px;
+    color: white;
+    transition: 1s ease-in;
+   
+
+}
+#search-form #close:hover{
+    color: red;
+    transform: rotate(20deg);
+}
+section{
+    padding:  12px;
+    
+}
+section:nth-child(even){
+    background: lightslategrey;
+}
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+.home .home-slider .slide .content{
+    flex: 1 1 45rem;
+}
+.home .home-slider .slide.image{
+    flex: 1 1 45rem;
+
+
+}
+.home .home-slider .slide.image img{
+width: 100%;
+}
+.home .home-slider .slide .content span{
+    color: aqua;
+    font-size: 27px;
+}
+.home .home-slider .slide .content h2{
+    color: black;
+    font-size: 40px;
+}
+.home .home-slider .slide .content p{
+    color: lightseagreen;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: .3rem 0;
+    line-height: 1.2rem;
+}
+.btn{
+    margin-top: 1.7rem;
+    display: inline-block;
+    font-size: 20px;
+    color:white;
+    background-color: #192a56;
+    border: 1px solid black transparent;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+.btn:hover{
+    color: white;
+    background-color: green;
+}
+.swiper-pagination-bullet-active{
+    background-color: #27ae60;
+}
+.sub-heading{
+    text-align: center;
+    color: blue;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color: green;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+}
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(27rem, 1fr));
+    gap: 4.5rem;
+}
+.dishes .box-container .box{
+   text-align: center;
+    padding: 10px;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.dishes .box-container .box .fa-heart,
+.dishes .box-container .box .fa-eye{
+    position: relative;
+    bottom: 5px;
+    line-height: 2rem;
+    font-size: 2rem;
+    border-radius: 49%;
+    height: 5rem;
+    width: 5rem;
+    color: var(--balck);
+    transition: all 2s ease;
+}
+.dishes .box-container .box .fa-heart{
+    left: -15rem;
+}
+.dishes .box-container .box .fa-eye{
+    right: -15rem;
+}
+
+.dishes .box-container .box:hover .fa-heart{
+    left: 1.5rem;
+}
+.dishes .box-container .box:hover .fa-eye{
+    right: 1.5rem;
+}
+.dishes .box-container .box img{
+    height: 17rem;
+    margin: 1rem 0;
+}
+.dishes .box-container .box h2{
+    color: #27ae60;
+    font-size: 20px;
+}
+
+
+.dishes .box-container .box .stars{
+    padding: 6px 0;
+
+}
+
+
+
+.dishes .box-container .box .stars i{
+    color: darkmagenta;
+    font-size: 20px;
+}
+
+.dishes .box-container .box span{
+    color: green;
+    font-weight: bolder;
+    font-size: 28px;
+    margin-left: 6px;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    grid-area: 1.5rem;
+}
+.about .row .image{
+    flex: 1 1 45rem;
+}
+.about .row .image img{
+    width: 90%;
+    height: 400px;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+}
+.about .row .content h2{
+   color: brown;
+   font: 4rem;
+   padding: 5rem 0;
+}
+
+.about .row .content p{
+    color:#567;
+    font: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1;
+ }
+.about .row .content .icons-continer{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: 5rem;
+}
+.about .row .content .icons-continer .icons{
+    font: 4rem;
+    background: #fff;
+    border-radius: 5rem;
+    border: 2px solid rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 17rem;
+    padding: 1.5rem 2rem;
+}
+.about .row .content .icons-continer .icons{
+    font-size: 2rem;
+    cursor: pointer;
+    color: blue;
+
+}
+ 
+.about .row .content .icons-continer .icons i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: blue;
+
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+}
+.menu .box-container .box{
+    background: white;
+    border: 2px solid rgba(0, 0, 0, .2);
+    border-radius: .3px;
+    box-shadow: var(--box-shadow);
+}
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%; 
+    border-radius: 5px;
+    object-fit: cover;
+}
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    height: 4rem;
+    width: 4rem;
+    font-size: 30px;
+    line-height: 5rem;
+    background: #fff;
+    border-radius: 49%;
+    color: black;
+    text-align: center;
+}
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: blue;
+    color: white;
+}
+.menu .box-container .box .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+   
+}
+
+.menu .box-container .box .content .stars i{
+    font-size:  1.6rem;
+    color: greenyellow;
+   
+}
+
+.menu .box-container .box .content  h2{
+    font-size:  3.6rem;
+    color: greenyellow;
+   
+}
+
+.menu .box-container .box .content  p{
+    font-size:  1.6rem;
+    color: brown;
+    padding: 5rem;
+   
+}
+.menu .box-container .box .content .price{
+    font-size: 20px;
+    margin-left: 1rem;
+    color: blue;
+    font-weight: bolder;
+}
+.review .slide{
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: 5rem;
+    position: relative;
+}
+.review .slide .fa-quote-right{
+    top: 2rem;
+    right: 2rem;
+    position: absolute;
+    font-size: 6rem;
+    color: grey;
+}
+.review .slide .user{
+ display: flexbox;
+ gap: 1rem;
+ text-align: center;
+ padding-bottom: 1.7rem;
+}
+.review .slide .user img{
+
+    height: 9rem;
+    width: 9rem;
+    border-radius: 49%;
+    object-fit: cover;
+}
+.review .slide .user h2{
+    color: green;
+    font-size: 20px;
+    padding-bottom: .7rem;
+}
+.review .user i{
+    font-size: 1.7rem;
+    color: #27ae60;
+}
+.review .slide p{
+    font-size: 18px;
+    color: rgb(255, 153, 127);
+    padding: 10px;
+}
+.order form{
+    max-width: 90rem;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    border: .5rem solid yellow;
+    background: white;
+    padding: 1.6rem;
+    margin: 0 auto;
+
+}
+.order form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.order form .inputBox .input{
+    width: 45%;
+}
+.order form .inputBox .input span{
+display: block;
+padding: 2rem 0;
+font-size: 25px;
+color: black;
+}
+.order form .inputBox .input input{
+    border-radius: 10px;
+    background: #27ae60;
+    color: white;
+    text-transform: none;
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+}
+.order form .inputBox .input textarea{
+    border-radius: 10px;
+    background: #27ae60;
+    color: white;
+    text-transform: none;
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20rem;
+    resize: none;
+}
+
+.order form .btn{
+    margin-top: none;
+}
+.order form .inputBox .input textarea:focus,
+.order form .inputBox .input input:focus{
+    border: 2px solid brown ;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+
+}
+    .footer .box-container .box h3{
+        padding: 4rem 0;
+        font-size: 3rem;
+        color: #27ae60;
+
+    }
+    
+
+.footer .box-container .box a{
+    display: block;
+    padding: 1.1rem 0;
+    font-size: 1.6rem;
+    color: #27a9ae;
+
+}
+.footer .box-container .box a:hover{
+    color: darkblue;
+    top: 5%;
+    text-decoration: underline;
+}
+.footer .credit{
+    text-align: center;
+    font-size: 20px;
+    height: 60px;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    background: #192a56;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    border-top: 2px solid rgba(0, 0, 0, .2);
+    margin-top: 1.5rem;
+}
+.footer .credit span{
+    color: #27ae60;
+}
+
+.loader-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 1s ease-in;
+}
+.loader-container img{
+    width: 100%;
+}
+.loader-container.fade-out{
+    right: 100%;
+    opacity: 2;
+}
+
